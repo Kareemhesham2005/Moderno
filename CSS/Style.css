@@ -298,6 +298,11 @@ ul {
   background-color: rgb(0, 0, 0, 0.5);
   transition: 0.4s;
   opacity: 0;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
 .portfolio .content .mask a {
   text-decoration: none;
@@ -313,8 +318,202 @@ ul {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .portfolio .content .mask:hover {
   opacity: 1;
 }
 /* End Portfolio */
+/* Start Contact */
+.contact {
+  padding: var(--section-padding) 0;
+  background-color: white;
+}
+.contact .text {
+  margin-bottom: 70px;
+  text-align: center;
+}
+.contact .text h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: normal;
+}
+.contact .text p {
+  color: #808080;
+}
+.contact .map {
+  background-image: url(../images/maps.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.contact .map::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgb(0 0 0 / 60%);
+}
+.contact .box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .contact .box {
+    flex-direction: column;
+  }
+}
+.contact .box .input-section {
+  width: calc(100% - 300px);
+}
+.contact .box .input-section input,
+.contact .box .input-section textarea {
+  padding: 17px 25px;
+  width: 49.5%;
+  margin-bottom: 15px;
+  box-shadow: none;
+  font-size: 15px;
+  background: #f1f4f7;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.contact .box .input-section input:focus,
+.contact .box .input-section textarea:focus {
+  outline: 1px solid #777;
+}
+.contact .box .input-section .special {
+  margin-top: 60px;
+}
+.contact .box .input-section textarea {
+  width: 100%;
+  height: 300px;
+}
+.contact .box .input-section button {
+  background-color: var(--main-color);
+  color: white;
+  width: 100%;
+  border: 2px solid var(--main-color);
+  font-size: 18px;
+  padding: 17px 25px;
+  cursor: pointer;
+  transition: border-color 0.4s, color 0.4s;
+  -webkit-transition: border-color 0.4s, color 0.4s;
+  -moz-transition: border-color 0.4s, color 0.4s;
+  -ms-transition: border-color 0.4s, color 0.4s;
+  -o-transition: border-color 0.4s, color 0.4s;
+}
+.contact .box .input-section button:hover {
+  color: var(--main-color);
+  background-color: white;
+}
+.contact .box .input-section input:not(.special) {
+  display: block;
+  width: 100%;
+}
+.contact .box .info {
+  width: 300px;
+}
+.contact .box .info address {
+  margin: 65px 0 0 auto;
+  width: calc(100% - 100px);
+}
+@media (max-width: 991px) {
+  .contact .box .input-section {
+    width: 100%;
+  }
+  .contact .box .input-section .special {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .contact .box .input-section .special:first-child {
+    margin-top: 60px;
+  }
+  .contact .box .info address {
+    margin: 65px 0 0;
+  }
+}
+.contact .box .info address span {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 20px;
+  display: block;
+}
+.contact .box .info address p {
+  color: #808080;
+}
+/* End Contact */
+/* Start Footer */
+.footer {
+  padding: 75px 0;
+  background-color: #333;
+  color: #fff;
+}
+.footer .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer .content p {
+  font-size: 15px;
+}
+.footer .content p span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+@media (max-width: 991px) {
+  .footer .content ul {
+    margin-top: 20px;
+  }
+  .footer .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.footer .content ul li {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+.footer .content ul li a {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.footer .content ul li i {
+  color: #333;
+}
+.footer .content ul li:hover a {
+  background-color: var(--main-color);
+}
+.footer .content ul li:hover i {
+  color: white;
+}
+/* End Footer */
